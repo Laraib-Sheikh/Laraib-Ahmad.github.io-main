@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: #00000a;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+@font-face {
+  font-family: 'Ai-font';
+  src: url('../assets/fonts/Ai-font.ttf');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'kg-summer-blackout';
+  src: url('../assets/fonts/KGSummerSunshineBlackout.ttf');
+  font-display: block;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#loader {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid yellow; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+.content-container {
+  display: none;
+  max-width: 650px;
+  width: 90%;
+  margin-inline: auto;
+}
+h1 {
+  color: white;
+  font-size: 12rem;
+  user-select: none;
+  font-weight: normal;
+  font-family: 'kg-summer-blackout';
+  text-shadow: 0px 0px;
+  line-height: 1;
+  animation-name: bounceIn;
+  text-align: center;
+  animation-duration: 1s;
+}
+
+.intro {
+  font-size: 2rem;
+  user-select: none;
+  text-align: center;
+  letter-spacing: 4px;
+  font-family: 'Ai-font', sans-serif;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+#msg {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: consolas;
+  text-align: center;
+  line-height: 1.6;
+}
+#msg a {
+  color: white;
+  text-decoration-thickness: 3px;
+  text-decoration-color: white;
+}
+.github-button {
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+  #msg {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 7.5px;
+  }
+}
